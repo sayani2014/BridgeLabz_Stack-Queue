@@ -8,7 +8,6 @@ public class QueueImplementation {
         Node node = new Node();
         node.data = item;
         if(front == null) {
-            //System.out.println("Queue is empty");
             front = node;
             rear = node;
         }
@@ -17,6 +16,20 @@ public class QueueImplementation {
             rear = node;
         }
     }
+
+    public void dequeue() {
+        if (front == null)
+            System.out.println("\n" + "Queue Underflow");
+
+        Node temp = front;
+        System.out.printf("Removing %d\n", temp.data);
+        front = front.next;
+
+        if (front == null)
+            rear = null;
+
+    }
+
     public void display() {
         if(front == null)
             System.out.println("Stack is Empty");

@@ -1,8 +1,6 @@
 /**
- * Ability to create a Queue of 56->30->70
+ * Ability to dequeue from the beginning
  * Use LinkedList to do the Queue Operations
- * Here enqueu will internally call append method on LinkedList.
- * So 56 will be added first then 30 and then 70 to make 56 on top of the Stack
  *
  * @author: SAYANI KOLEY
  * @since: 23.06.2021
@@ -31,10 +29,14 @@ public class QueueMain {
                     flag = true;
                     break;
                 case 2:
-                    queueOperation.display();
+                    queueOperation.dequeue();
                     flag = true;
                     break;
                 case 3:
+                    queueOperation.display();
+                    flag = true;
+                    break;
+                case 4:
                     flag = false;
                     break;
             }
@@ -42,9 +44,10 @@ public class QueueMain {
     }
 
     public static int userMenu () {
-        System.out.println("Press 1 to Insert");
-        System.out.println("Press 2 to Display");
-        System.out.println("Press 3 to Quit");
+        System.out.println("Press 1 to Enqueue");
+        System.out.println("Press 2 to Dequeue");
+        System.out.println("Press 3 to Display");
+        System.out.println("Press 4 to Quit");
 
         int choice = input.nextInt();
 

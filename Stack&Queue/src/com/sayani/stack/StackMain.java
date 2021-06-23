@@ -1,8 +1,6 @@
 /**
- * Ability to create a Stack of 56->30->70
+ * Ability to peak and pop from the Stack till it is empty 56 ->30 ->70
  * Use LinkedList to do the Stack Operations
- * Here push will internally call add method on LinkedList.
- * So 70 will be added first then 30 and then 56 to make 56 on top of the Stack
  *
  * @author: SAYANI KOLEY
  * @since: 23.06.2021
@@ -30,19 +28,30 @@ public class StackMain {
                     flag = true;
                     break;
                 case 2:
-                    stackOperation.display();
+                    stackOperation.pop();
                     flag = true;
                     break;
                 case 3:
+                    System.out.printf("Top element is %d", +stackOperation.peek());
+                    System.out.println();
+                    flag = true;
+                    break;
+                case 4:
+                    stackOperation.display();
+                    flag = true;
+                    break;
+                case 5:
                     flag = false;
                     break;
             }
         }
     }
     public static int userMenu () {
-        System.out.println("Press 1 to Insert");
-        System.out.println("Press 2 to Display");
-        System.out.println("Press 3 to Quit");
+        System.out.println("Press 1 to Push");
+        System.out.println("Press 2 to Pop");
+        System.out.println("Press 3 to Peek");
+        System.out.println("Press 4 to Display");
+        System.out.println("Press 5 to Quit");
 
         int choice = input.nextInt();
 
